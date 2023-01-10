@@ -1,15 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../../../libs/supabaseClient";
 
-type ResponseData = {
-  message: string;
-};
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
-) {
+export default async function handler(req, res) {
   if (req.method !== "DELETE") return res.status(405).end();
+
   const { id } = req.query;
 
   const { data: posts, error } = await supabase
