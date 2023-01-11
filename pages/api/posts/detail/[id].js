@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const { id } = req.query;
 
   let { data: posts, error } = await supabase
-    .from("post")
+    .from("posts")
     .select("*")
     .eq("id", id);
 

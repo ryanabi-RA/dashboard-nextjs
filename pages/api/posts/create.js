@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   const { title, content } = req.body;
 
   const { data: posts, error } = await supabase
-    .from("post")
+    .from("posts")
     .insert({ title, content })
     .select();
 
