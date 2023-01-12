@@ -3,7 +3,12 @@
 Demo : https://noteapp-book.vercel.app/
 
 ### Resources
--  React Js
+-  Next Js
+-  Supabase
+
+### impelentasi
+- CRUD
+- Rest Api
 
 ### How to run in localhost
 
