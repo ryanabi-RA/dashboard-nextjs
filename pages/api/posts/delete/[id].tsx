@@ -1,6 +1,15 @@
+import type { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../../../libs/supabaseClient";
 
-export default async function handler(req, res) {
+type ResponseData = {
+  message: string;
+  posts: any;
+};
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<ResponseData>
+) {
   if (req.method !== "DELETE") return res.status(405).end();
 
   const { id } = req.query;
@@ -14,5 +23,6 @@ export default async function handler(req, res) {
 
   res.status(200).json({
     message: "delete data post, successfuly",
+    posts,
   });
 }
