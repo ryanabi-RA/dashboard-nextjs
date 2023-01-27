@@ -1,7 +1,5 @@
 # Project NoteApp
 
-Demo : https://noteapp-book.vercel.app/
-
 ### Resources
 -  Next Js
 -  Supabase
